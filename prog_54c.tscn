@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccm4eveeu5mum"]
+
+[ext_resource type="Script" path="res://prog54c.gd" id="1_vlay3"]
+
+[node name="prog54c" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vlay3")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 210.0
+offset_bottom = 38.0
+text = "Radius:"
+
+[node name="txtRad" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 8.0
+offset_right = 444.0
+offset_bottom = 74.0
+
+[node name="btncalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 175.0
+offset_right = 175.0
+offset_bottom = 224.0
+text = "calculate"
+
+[node name="btncle" type="Button" parent="."]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 174.0
+offset_right = 335.0
+offset_bottom = 223.0
+text = "clear"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 174.0
+offset_right = 497.0
+offset_bottom = 223.0
+text = "exit"
+
+[node name="lblout" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 80.0
+offset_right = 207.0
+offset_bottom = 162.0
+
+[connection signal="pressed" from="btncalc" to="." method="_on_btncalc_pressed"]
+[connection signal="pressed" from="btncle" to="." method="_on_btncle_pressed"]
+[connection signal="pressed" from="btncle" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
