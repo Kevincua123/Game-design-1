@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwmqncjpuxyya"]
+
+[ext_resource type="Script" path="res://prog_88a.gd" id="1_i2ifo"]
+
+[node name="prog_88a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i2ifo")
+
+[node name="num1" type="Label" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 4.0
+offset_right = 204.0
+offset_bottom = 55.0
+text = "Enter num1:"
+
+[node name="num2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 102.0
+offset_right = 209.0
+offset_bottom = 153.0
+text = "Enter num2:"
+
+[node name="txtnum1" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 7.0
+offset_right = 458.0
+offset_bottom = 73.0
+
+[node name="txtnum2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 99.0
+offset_right = 456.0
+offset_bottom = 165.0
+
+[node name="lblout" type="Label" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 202.0
+offset_right = 388.0
+offset_bottom = 308.0
+
+[node name="btncal" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 334.0
+offset_right = 216.0
+offset_bottom = 442.0
+text = "calculate"
+
+[node name="btnclear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 340.0
+offset_right = 436.0
+offset_bottom = 448.0
+text = "clear"
+
+[node name="btnexit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 339.0
+offset_right = 661.0
+offset_bottom = 447.0
+text = "exit
+"
+
+[connection signal="pressed" from="btncal" to="." method="_on_btncal_pressed"]
+[connection signal="pressed" from="btnclear" to="." method="_on_btnclear_pressed"]
+[connection signal="pressed" from="btnexit" to="." method="_on_btnexit_pressed"]

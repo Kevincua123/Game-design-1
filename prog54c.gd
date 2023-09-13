@@ -15,7 +15,7 @@ func _on_btncalc_pressed():
 	var rad = float($txtRad.text)
 	var area = PI * pow(rad, 2)
 	var circ = 2 * PI * rad
-	$lblout.text =""
+	$lblout.text = ""
 
 
 func _on_exit_pressed():
