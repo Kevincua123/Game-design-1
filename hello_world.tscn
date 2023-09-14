@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://c06xwse61prqh"]
+
+[ext_resource type="Script" path="res://Hello_world.gd" id="1_1i63m"]
+
+[node name="Hello_world" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1i63m")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 18.0
+offset_right = 507.0
+offset_bottom = 139.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 171.0
+offset_right = 495.0
+offset_bottom = 272.0
+text = "show"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 279.0
+offset_right = 497.0
+offset_bottom = 380.0
+text = "clear"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

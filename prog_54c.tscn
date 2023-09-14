@@ -53,7 +53,7 @@ text = "exit"
 layout_mode = 0
 offset_left = 16.0
 offset_top = 80.0
-offset_right = 207.0
+offset_right = 274.0
 offset_bottom = 162.0
 
 [connection signal="pressed" from="btncalc" to="." method="_on_btncalc_pressed"]

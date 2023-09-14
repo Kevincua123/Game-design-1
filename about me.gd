@@ -11,17 +11,9 @@ func _process(delta):
 	pass
 
 
-func _on_btncalc_pressed():
-	var rad = float($txtRad.text)
-	var area = PI * pow(rad, 2)
-	var circ = 2 * PI * rad
-	
+func _on_button_pressed():
+	$Label.text = "I was born in mexico"
 
 
-func _on_exit_pressed():
-	get_tree().quit()
-
-
-func _on_btncle_pressed():
-	$txtRad.text = ""
-	$lblout.text = ""
+func _on_button_2_pressed():
+	$Label.text = ""
