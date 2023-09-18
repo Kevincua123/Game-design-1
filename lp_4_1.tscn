@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4i152en4qvyb"]
+
+[ext_resource type="Script" path="res://lp4-1.gd" id="1_lxsfu"]
+
+[node name="lp4-1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lxsfu")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 267.0
+offset_bottom = 62.0
+text = "enter number of copies:"
+
+[node name="lblout" type="Label" parent="."]
+layout_mode = 0
+offset_top = 124.0
+offset_right = 413.0
+offset_bottom = 274.0
+text = ":"
+
+[node name="txtcopies" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 8.0
+offset_right = 527.0
+offset_bottom = 54.0
+
+[node name="btncal" type="Button" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 277.0
+offset_right = 145.0
+offset_bottom = 338.0
+text = "calculate"
+
+[node name="btnexit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 275.0
+offset_right = 536.0
+offset_bottom = 336.0
+text = "exit"
+
+[node name="btnclear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 275.0
+offset_right = 336.0
+offset_bottom = 336.0
+text = "clear"
+
+[connection signal="pressed" from="btncal" to="." method="_on_btncal_pressed"]
+[connection signal="pressed" from="btnexit" to="." method="_on_btnexit_pressed"]
+[connection signal="pressed" from="btnclear" to="." method="_on_btnclear_pressed"]
