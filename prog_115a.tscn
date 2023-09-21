@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7wbchgj527al"]
+
+[ext_resource type="Script" path="res://prog115a.gd" id="1_elpfh"]
+
+[node name="prog115a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_elpfh")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 1158.0
+offset_bottom = 480.0
+
+[node name="btncalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 501.0
+offset_right = 347.0
+offset_bottom = 617.0
+text = "calculate"
+
+[node name="btnexit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 795.0
+offset_top = 503.0
+offset_right = 1113.0
+offset_bottom = 619.0
+text = "exit"
+
+[node name="btnclear2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 499.0
+offset_right = 718.0
+offset_bottom = 615.0
+text = "clear"
+
+[connection signal="pressed" from="btncalc" to="." method="_on_btncalc_pressed"]
+[connection signal="pressed" from="btnexit" to="." method="_on_btnexit_pressed"]
+[connection signal="pressed" from="btnclear2" to="." method="_on_btnclear_2_pressed"]

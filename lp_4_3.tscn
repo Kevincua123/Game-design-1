@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://bovwnt65in4qn"]
+
+[ext_resource type="Script" path="res://Lp4-3.gd" id="1_yn1ee"]
+
+[node name="Lp4-3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yn1ee")
+
+[node name="eggs" type="Label" parent="."]
+layout_mode = 0
+offset_right = 219.0
+offset_bottom = 58.0
+text = "number of eggs"
+
+[node name="lblout" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 107.0
+offset_right = 553.0
+offset_bottom = 207.0
+
+[node name="line" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 1.0
+offset_right = 489.0
+offset_bottom = 49.0
+
+[node name="btncal" type="Button" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 222.0
+offset_right = 190.0
+offset_bottom = 273.0
+text = "calculate"
+
+[node name="btnclear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 223.0
+offset_right = 393.0
+offset_bottom = 274.0
+text = "clear"
+
+[node name="btnexit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 223.0
+offset_right = 591.0
+offset_bottom = 274.0
+text = "exit"
+
+[connection signal="pressed" from="btncal" to="." method="_on_btncal_pressed"]
+[connection signal="pressed" from="btnclear" to="." method="_on_btnclear_pressed"]
