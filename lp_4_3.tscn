@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bovwnt65in4qn"]
 
-[ext_resource type="Script" path="res://Lp4-3.gd" id="1_yn1ee"]
+[ext_resource type="Script" path="res://lp_4_3.gd" id="1_le0t4"]
 
 [node name="Lp4-3" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_yn1ee")
+script = ExtResource("1_le0t4")
 
 [node name="eggs" type="Label" parent="."]
 layout_mode = 0
@@ -20,11 +20,11 @@ text = "number of eggs"
 [node name="lblout" type="Label" parent="."]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 107.0
+offset_top = 74.0
 offset_right = 553.0
 offset_bottom = 207.0
 
-[node name="line" type="LineEdit" parent="."]
+[node name="txtEggs" type="LineEdit" parent="."]
 layout_mode = 0
 offset_left = 268.0
 offset_top = 1.0
@@ -57,3 +57,4 @@ text = "exit"
 
 [connection signal="pressed" from="btncal" to="." method="_on_btncal_pressed"]
 [connection signal="pressed" from="btnclear" to="." method="_on_btnclear_pressed"]
+[connection signal="pressed" from="btnexit" to="." method="_on_btnexit_pressed"]
