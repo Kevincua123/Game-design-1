@@ -11,18 +11,23 @@ func _process(delta):
 	pass
 
 
-func _on_btncal_pressed():
-	var eggs = int($txtEggs.text)
-	var dozens = floor(eggs/12)
-	var remainder = eggs % 12
-	var sum = (0.45)
+func _on_btncalc_pressed():
+	var A = int($txtA.text)
+	var B = int ($txtB.text)
+	var C = int ($txtC.text)
+	var proot = (-B + sqrt(B**2 - 4 * A * C)) / 2 * A
+	var nroot = (-B - sqrt(B**2 - 4 * A * C)) / 2 * A
+	$lblout.text = "Roots are %d and %d" % [proot, nroot]
 	
 
 
-
 func _on_btnclear_pressed():
-	$txtEggs.text = ""
+	$txtA.text = ""
+	$txtB.text = ""
+	$txtC.text = ""
 	$lblout.text = ""
+	
+	
 
 
 func _on_btnexit_pressed():

@@ -11,19 +11,14 @@ func _process(delta):
 	pass
 
 
-func _on_btncal_pressed():
-	var eggs = int($txtEggs.text)
-	var dozens = floor(eggs/12)
-	var remainder = eggs % 12
-	var sum = (0.45)
-	
-
+func _on_btncalc_pressed():
+	var Sum = 0
+	var lcv = 3 #loop control variable
+	while lcv <= 9669:
+		Sum += lcv
+		$Itemlist.add_item(str(Sum))
+	lcv += 3
 
 
 func _on_btnclear_pressed():
-	$txtEggs.text = ""
-	$lblout.text = ""
-
-
-func _on_btnexit_pressed():
-	get_tree().quit()
+	$ItemList.text = ""

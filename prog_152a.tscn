@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://crp8us7fi5e1k"]
+
+[ext_resource type="Script" path="res://prog_152a.gd" id="1_uhckb"]
+
+[node name="prog_152a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uhckb")
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_right = 1138.0
+offset_bottom = 373.0
+
+[node name="btncalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 421.0
+offset_right = 362.0
+offset_bottom = 586.0
+text = "caculate
+"
+
+[node name="btnclear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 431.0
+offset_right = 724.0
+offset_bottom = 596.0
+text = "clear
+"
+
+[node name="btnexit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 786.0
+offset_top = 429.0
+offset_right = 1115.0
+offset_bottom = 594.0
+text = "exit
+"
+
+[connection signal="pressed" from="btncalc" to="." method="_on_btncalc_pressed"]
+[connection signal="pressed" from="btnclear" to="." method="_on_btnclear_pressed"]

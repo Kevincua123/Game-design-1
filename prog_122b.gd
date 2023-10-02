@@ -11,18 +11,15 @@ func _process(delta):
 	pass
 
 
-func _on_btncal_pressed():
-	var eggs = int($txtEggs.text)
-	var dozens = floor(eggs/12)
-	var remainder = eggs % 12
-	var sum = (0.45)
-	
-
+func _on_btncalc_pressed():
+	$ItemList.add_item("Number   square    square root")
+	for num in range(1, 41):
+		var nummsquared = num**2
+		
 
 
 func _on_btnclear_pressed():
-	$txtEggs.text = ""
-	$lblout.text = ""
+	$Itemlist.text = ""
 
 
 func _on_btnexit_pressed():

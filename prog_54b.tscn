@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://77aulfusii0"]
+
+[node name="prog_54b" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="btncalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 477.0
+offset_right = 381.0
+offset_bottom = 640.0
+text = "calculate"
+
+[node name="btnclear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 470.0
+offset_right = 783.0
+offset_bottom = 633.0
+text = "clear"
+
+[node name="btnexit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 803.0
+offset_top = 485.0
+offset_right = 1148.0
+offset_bottom = 648.0
+text = "exit"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 782.0
+offset_top = 5.0
+offset_right = 1116.0
+offset_bottom = 70.0
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 794.0
+offset_top = 86.0
+offset_right = 1128.0
+offset_bottom = 155.0
+
+[node name="LineEdit3" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 793.0
+offset_top = 169.0
+offset_right = 1127.0
+offset_bottom = 242.0
+
+[node name="LineEdit4" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 795.0
+offset_top = 255.0
+offset_right = 1129.0
+offset_bottom = 332.0

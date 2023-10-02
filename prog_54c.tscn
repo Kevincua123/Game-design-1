@@ -57,6 +57,6 @@ offset_right = 274.0
 offset_bottom = 162.0
 
 [connection signal="pressed" from="btncalc" to="." method="_on_btncalc_pressed"]
-[connection signal="pressed" from="btncle" to="." method="_on_clear_pressed"]
 [connection signal="pressed" from="btncle" to="." method="_on_btncle_pressed"]
+[connection signal="pressed" from="btncle" to="." method="_on_clear_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
