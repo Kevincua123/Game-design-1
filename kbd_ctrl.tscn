@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://k5y7bey1dyx6"]
+
+[ext_resource type="Script" path="res://kbd_ctrl.gd" id="1_tlng6"]
+[ext_resource type="PackedScene" uid="uid://1nm5a0xlol35" path="res://kbdplayer.tscn" id="2_eehx3"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_awmo8"]
+a = Vector2(742, 16)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a7d5e"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_445m0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jbxg"]
+size = Vector2(207, 190)
+
+[node name="kbd_ctrl" type="Node2D"]
+script = ExtResource("1_tlng6")
+
+[node name="kbdplayer" parent="." instance=ExtResource("2_eehx3")]
+
+[node name="startplatform" type="StaticBody2D" parent="."]
+position = Vector2(-4, -73)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="startplatform"]
+position = Vector2(8, 268)
+shape = SubResource("SegmentShape2D_awmo8")
+one_way_collision = true
+
+[node name="Sprite2D" type="Sprite2D" parent="startplatform"]
+position = Vector2(371.524, 278.143)
+scale = Vector2(-723.268, -2.66689)
+texture = SubResource("PlaceholderTexture2D_a7d5e")
+
+[node name="world" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world"]
+polygon = PackedVector2Array(-5, 0, -22, 276, 13, 283, 69, 335, 86, 304, 106, 354, 119, 388, 151, 420, 99, 534, 54, 584, 35, 620, 99, 634, 133, 632, 181, 611, 204, 565, 240, 552, 266, 586, 284, 600, 329, 602, 380, 602, 416, 604, 496, 611, 569, 611, 608, 602, 582, 557, 596, 518, 657, 524, 673, 556, 719, 586, 790, 584, 837, 559, 1013, 525, 1096, 577, 1175, 578, 1218, 520, 1248, 442, 1298, 455, 1336, 578, 1298, 636, 1170, 681, 1029, 694, 872, 709, 565, 684, 401, 689, 134, 707, -27, 712, -186, 669, -199, 568, -133, 518, -178, 422, -183, 324, -181, 220, -125, 117, -88, 52)
+
+[node name="Polygon2D" type="Polygon2D" parent="world/CollisionPolygon2D"]
+polygon = PackedVector2Array(-141, 503, -219, 492, -262, 437)
+
+[node name="interact" type="RigidBody2D" parent="."]
+position = Vector2(970, 371)
+freeze = true
+
+[node name="Sprite2D" type="Sprite2D" parent="interact"]
+position = Vector2(0, 4)
+scale = Vector2(-215.187, 194.54)
+texture = SubResource("PlaceholderTexture2D_445m0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interact"]
+position = Vector2(0.5, 3)
+shape = SubResource("RectangleShape2D_3jbxg")
+
+[node name="draggable" type="RigidBody2D" parent="."]
+freeze = true
+
+[node name="Sprite2D" type="Sprite2D" parent="draggable"]
+position = Vector2(0, 4)
+scale = Vector2(-215.187, 194.54)
+texture = SubResource("PlaceholderTexture2D_445m0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="draggable"]
+position = Vector2(-2, 3)
+shape = SubResource("RectangleShape2D_3jbxg")
+
+[node name="Button" type="Button" parent="draggable"]
+offset_left = -104.0
+offset_top = -91.0
+offset_right = 112.0
+offset_bottom = 99.0
+focus_mode = 0
+
+[connection signal="mouse_entered" from="interact" to="." method="_on_interact_mouse_entered"]
+[connection signal="button_down" from="draggable/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="draggable/Button" to="." method="_on_button_button_up"]

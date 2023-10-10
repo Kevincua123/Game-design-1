@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgawpoai6t8tm"]
+
+[ext_resource type="Script" path="res://calculator.gd" id="1_5fngg"]
+
+[node name="calculator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5fngg")
+
+[node name="num1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 171.0
+offset_bottom = 57.0
+text = "Num1
+"
+
+[node name="num2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 189.0
+offset_right = 163.0
+offset_bottom = 234.0
+text = "Num2"
+
+[node name="result" type="Label" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 258.0
+offset_right = 155.0
+offset_bottom = 303.0
+text = "result"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 106.0
+offset_right = 150.0
+offset_bottom = 151.0
+text = "Operation"
+
+[node name="lblout" type="Label" parent="."]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 251.0
+offset_right = 315.0
+offset_bottom = 296.0
+
+[node name="btnexit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 266.0
+offset_right = 571.0
+offset_bottom = 314.0
+text = "exit"
+
+[node name="btnclear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 209.0
+offset_right = 570.0
+offset_bottom = 257.0
+text = "clear"
+
+[node name="btnAdd" type="Button" parent="."]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 15.0
+offset_right = 449.0
+offset_bottom = 49.0
+text = "+"
+
+[node name="btnMul" type="Button" parent="."]
+layout_mode = 0
+offset_left = 530.0
+offset_top = 17.0
+offset_right = 583.0
+offset_bottom = 51.0
+text = "*"
+
+[node name="btnSub" type="Button" parent="."]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 17.0
+offset_right = 516.0
+offset_bottom = 51.0
+text = "-"
+
+[node name="btnDiv" type="Button" parent="."]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 55.0
+offset_right = 450.0
+offset_bottom = 89.0
+text = "/"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 15.0
+offset_right = 333.0
+offset_bottom = 58.0
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 189.0
+offset_right = 338.0
+offset_bottom = 232.0
+
+[connection signal="pressed" from="btnexit" to="." method="_on_btnexit_pressed"]
+[connection signal="pressed" from="btnclear" to="." method="_on_btnclear_pressed"]

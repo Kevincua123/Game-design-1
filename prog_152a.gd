@@ -16,7 +16,7 @@ func _on_btncalc_pressed():
 	var lcv = 3 #loop control variable
 	while lcv <= 9669:
 		Sum += lcv
-		$Itemlist.add_item(str(Sum))
+		$ItemList.add_item(str(Sum))
 	lcv += 3
 
 
